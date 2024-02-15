@@ -1,0 +1,12 @@
+{
+	"appId": "com.temsool.phrasebook",
+	"appName": "Turkish Persian Phrasebook",
+	"webDir": "dist",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 3000,
+			"launchAutoHide": false
+		}
+	}
+}

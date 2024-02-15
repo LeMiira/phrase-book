@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="admob_app_id">ca-app-pub-8415309020579786~4679512814</string>
+    <string name="app_name">دستیار ترکی استانبولی</string>
+    <string name="title_activity_main">دستیار ترکی استانبولی</string>
+    <string name="package_name">com.temsool.phrasebook</string>
+    <string name="custom_url_scheme">com.temsool.phrasebook</string>
+</resources>

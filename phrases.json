@@ -1,0 +1,78 @@
+{
+    
+    "phrases": [
+      {
+        "id": 1,
+        "cat_id":2,
+        "premium":false,
+        "tr": {
+            "sound":"merhaba.mp3",
+            "text":"Merhaba",
+            "desc":""
+        },
+        
+        "en":{
+            "sound":"",
+            "text": "Hello",
+            "desc":""
+        },
+        "fa": {  
+            "sound":"",
+           "text": "سلام",
+           "desc":""
+        }
+      
+      },
+     
+      {
+        "id": 2,
+        "cat_id":2,
+        "premium":true,
+        "tr": {
+            "sound":"amk.mp3",
+            "text":"AMK",
+            "desc":"Amına Koyum Oruspu çoçuğu"
+        },
+         
+        "en":{
+            "sound":"",
+            "text": "Hello",
+            "desc":""
+        },
+        "fa": {  
+            "sound":"",
+           "text": "گاییدمت مادر جنده",
+           "desc":"آم به معنی کُس است. تحت اللفظی یعنی بر کُست گذاشتم ای فرزند جنده"
+        }
+      
+      }
+   ,
+   {
+    "id": 3,
+    "cat_id":2,
+    "premium":false,
+    "tr": {
+        "sound":"amk.mp3",
+        "text":"AMK",
+        "desc":"Amına Koyum Oruspu çoçuğu"
+    },
+     
+    "en":{
+        "sound":"",
+        "text": "",
+        "desc":""
+    },
+    "fa": {  
+        "sound":"",
+       "text": "گاییدمت مادر جنده",
+       "desc":"آم به معنی کُس است. تحت اللفظی یعنی بر کُست گذاشتم ای فرزند جنده"
+    }
+  
+  }
+     
+     
+      
+    
+     
+    ]
+  }

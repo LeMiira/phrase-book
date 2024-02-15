@@ -1,0 +1,14 @@
+ <v-card-header class="rtl tags-header" v-if="item.tag_ids !== null">
+     {{ item.tag_ids }}
+    <div v-for="tagID in item.tag_ids" :key="tagID">
+      <v-chip
+        color="black"
+        class="ml-2"
+        size="small"
+        v-for="tagItem in phraseTags(tagID)"
+        :key="tagItem[0].id"
+      >
+        {{ tagItem[0].farsi }}
+      </v-chip>
+    </div>
+  </v-card-header>

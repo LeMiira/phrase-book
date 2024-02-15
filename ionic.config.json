@@ -1,0 +1,7 @@
+{
+  "name": "Turkish Phrase Book",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
