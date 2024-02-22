@@ -1,6 +1,6 @@
 <template>
   <v-row dense>
-    <v-col v-for="item in categories" :key="item.id" cols="6">
+    <v-col v-for="item in categories" :key="item.id" cols="4">
       <v-card
         :to="'/phrases/' + item.id"
         v-if="item.published"
@@ -18,12 +18,13 @@
           </v-chip>
         </div>
 
-        <v-card-header>
+        <v-card-header class="pa-2">
           <v-img
             class="rounded-lg mx-auto"
             :src="getCategoryImage(item.categoryImage, item.id)"
-            max-width="300px"
-            :aspect-ratio="16 / 9"
+            max-width="100px"
+            aspect-ratio="16/9"
+            cover
           >
             <template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">

@@ -1,16 +1,13 @@
-    <template>
+
+<template>
   <v-col v-for="(item, index) in PhrasesList" :key="index" cols="12">
-    <v-card v-if="item" class="mb-4">
-      <v-card-header>
-        <v-card-avatar>
-          <v-avatar size="x-small" image="/icons/tr-sq.svg"></v-avatar>
-        </v-card-avatar>
-
-        <v-card-header-text>
-          <v-card-title>{{ item.turkish }}</v-card-title>
-
-          <v-card-text class="pa-0"> {{ item.desc_tr }} </v-card-text>
-        </v-card-header-text>
+    <v-card
+      v-if="item"
+      class="mb-4"
+      :title="item.turkish"
+      prepend-avatar="/icons/tr-sq.svg"
+    >
+      <template v-slot:append>
         <v-btn
           v-if="item.sound_tr"
           class="rtl play-btn"
@@ -20,7 +17,9 @@
         >
           <v-icon icon="mdi-volume-high"></v-icon>
         </v-btn>
-      </v-card-header>
+
+        <v-card-text class="pa-0"> {{ item.desc_tr }} </v-card-text>
+      </template>
 
       <v-divider></v-divider>
 
@@ -38,35 +37,35 @@
       </div>
 
       <div v-if="!item.isPremium" class="card-bottom">
-        <v-card-header class="rtl">
-          <v-card-avatar>
-            <v-avatar size="x-small" image="/icons/fa-sq.svg"></v-avatar>
-          </v-card-avatar>
+        <v-card
+          v-if="item"
+          class="rtl"
+          :title="item.farsi"
+          prepend-avatar="/icons/fa-sq.svg"
+        >
+          <template v-slot:append>
+            <v-icon class="mr-2" v-if="item.desc_fa" size="xsmall" color="red"
+              >mdi-information-outline</v-icon
+            >
+            <v-card-text class="pa-0"> {{ item.desc_fa }} </v-card-text>
+            <div
+              v-if="item.color"
+              class="color-badge"
+              :style="'background-color:' + item.color"
+            ></div>
 
-          <v-card-header-text>
-            <v-card-title>
-              {{ item.farsi }}
-              <v-icon class="mr-2" v-if="item.desc_fa" size="xsmall" color="red"
-                >mdi-information-outline</v-icon
-              >
-            </v-card-title>
-          </v-card-header-text>
-          <div
-            v-if="item.color"
-            class="color-badge"
-            :style="'background-color:' + item.color"
-          ></div>
+            <v-btn
+              v-if="isWebApp"
+              class="rtl play-btn rotate-180"
+              @click.prevent="playFA(item.farsi)"
+              color="#607D8B"
+              variant="contained-text"
+            >
+              <v-icon icon="mdi-volume-high"></v-icon>
+            </v-btn>
+          </template>
+        </v-card>
 
-          <v-btn
-            v-if="isWebApp"
-            class="rtl play-btn rotate-180"
-            @click.prevent="playFA(item.farsi)"
-            color="#607D8B"
-            variant="contained-text"
-          >
-            <v-icon icon="mdi-volume-high"></v-icon>
-          </v-btn>
-        </v-card-header>
         <!-- <PhraseTags v-if="item.tag_ids" :tagIds="item.tag_ids" /> -->
 
         <v-divider v-if="item.farsi_literally"> </v-divider>
@@ -80,8 +79,6 @@
             <div v-html="item.farsi_literally"></div>
           </v-card-text>
         </v-card-text>
-
-        <v-divider> </v-divider>
 
         <v-card-actions
           v-if="anyButtonIsAvailable(item)"

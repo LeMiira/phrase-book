@@ -1,14 +1,5 @@
 <template>
-  <v-card>
-    <v-card-header class="rtl">
-      <v-card-avatar>
-        <v-avatar image="/icons/tr-sq.svg"></v-avatar>
-      </v-card-avatar>
-
-      <v-card-header-text>
-        <v-card-title>درباره برنامه</v-card-title>
-      </v-card-header-text>
-    </v-card-header>
+  <v-card class="rtl" title="درباره برنامه" prepend-avatar="/icons/tr-sq.svg">
     <v-card-text class="rtl">
       <div v-html="aboutUs"></div>
     </v-card-text>
