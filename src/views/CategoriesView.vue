@@ -1,23 +1,39 @@
 <template>
   <v-row dense>
-    <v-col v-for="item in categories" :key="item.id" cols="4">
+    <v-col
+      v-for="item in categories"
+      :key="item.order_id"
+      :order="item.id"
+      cols="6"
+    >
       <v-card
         :to="'/phrases/' + item.id"
         v-if="item.published"
         class="category-btn ma-2"
       >
-        <div class="card-bottom rtl">
-          <v-chip
-            v-if="item.isPremium"
-            class="premium-badge float-badge rtl pa-1"
-            color="orange"
-            label
-            text-color="white"
-          >
-            <v-icon icon="mdi-lock"></v-icon>
-          </v-chip>
-        </div>
+        <v-card-actions class="rtl">
+          <v-btn color="teal" variant="contained-text" block>
+            <v-badge
+              v-if="item.isNew"
+              class="new-badge"
+              :color="item.labelNewColor"
+              :content="item.labelNew"
+              inline
+              text-color="white"
+            >
+            </v-badge>
 
+            <v-badge
+              v-if="item.isUpdated"
+              class="update-badge"
+              :color="item.labelUpdateColor"
+              :content="item.labelUpdate"
+              inline
+              text-color="white"
+            >
+            </v-badge>
+          </v-btn>
+        </v-card-actions>
         <v-card-header class="pa-2">
           <v-img
             class="rounded-lg mx-auto"
@@ -102,7 +118,7 @@ export default {
           .from("categories")
           .select("*, phrases!inner(id)")
 
-          .order("order_id");
+          .order("order_id", { ascending: false });
         //console.log(categories.data);
         this.$store.commit("putCategories", categories.data);
       } catch (error) {

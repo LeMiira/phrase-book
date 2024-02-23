@@ -47,7 +47,7 @@
             <v-icon class="mr-2" v-if="item.desc_fa" size="xsmall" color="red"
               >mdi-information-outline</v-icon
             >
-            <v-card-text class="pa-0"> {{ item.desc_fa }} </v-card-text>
+
             <div
               v-if="item.color"
               class="color-badge"

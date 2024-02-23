@@ -345,7 +345,7 @@ export default {
     drawer: false,
     snackbar: false,
     thanks: false,
-    installedAppVersion: 1.4,
+    installedAppVersion: 2.1,
   }),
   watch: {
     group() {
