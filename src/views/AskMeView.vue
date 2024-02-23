@@ -9,13 +9,17 @@
     </v-card-avatar>
     <v-card-header class="rtl">
       <v-card-header-text>
-        <v-card-title>
+        <v-card-text
+          style="font-size: 16px overflow: visible;
+    text-overflow: unset;
+    white-space: normal;"
+        >
           عبارت یا کلمه مورد نظر خود را سوال کنید تا در سریعترین زمان ممکن به
           مجموعه اضافه شود. <br />
           عباراتی که از این بخش اضافه میشوند به دسته بندی "درخواستی" اضافه خواهد
-          شد.
-        </v-card-title>
-      </v-card-header-text>
+          شد.</v-card-text
+        ></v-card-header-text
+      >
     </v-card-header>
     <v-card-text class="rtl">
       <v-row>

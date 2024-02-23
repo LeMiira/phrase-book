@@ -11,29 +11,32 @@
         v-if="item.published"
         class="category-btn ma-2"
       >
-        <v-card-actions class="rtl">
-          <v-btn color="teal" variant="contained-text" block>
-            <v-badge
-              v-if="item.isNew"
-              class="new-badge"
-              :color="item.labelNewColor"
-              :content="item.labelNew"
-              inline
-              text-color="white"
-            >
-            </v-badge>
+        <div
+          class="ltr"
+          style="position: absolute; top: 5px; right: 5px; z-index: 1"
+          v-if="item.isNew || item.isUpdated"
+        >
+          <v-badge
+            v-if="item.isNew"
+            inline
+            class="new-badge"
+            :color="item.labelNewColor"
+            :content="item.labelNew"
+            text-color="white"
+          >
+          </v-badge>
 
-            <v-badge
-              v-if="item.isUpdated"
-              class="update-badge"
-              :color="item.labelUpdateColor"
-              :content="item.labelUpdate"
-              inline
-              text-color="white"
-            >
-            </v-badge>
-          </v-btn>
-        </v-card-actions>
+          <v-badge
+            inline
+            v-if="item.isUpdated"
+            class="update-badge"
+            :color="item.labelUpdateColor"
+            :content="item.labelUpdate"
+            text-color="white"
+          >
+          </v-badge>
+        </div>
+
         <v-card-header class="pa-2">
           <v-img
             class="rounded-lg mx-auto"

@@ -93,7 +93,7 @@
               <v-list-item
                 color="red"
                 class="sidebar-list-item"
-                href="https://twitter.com/miiiiiiiiiirra"
+                to="/contact"
                 prepend-icon="mdi-email-outline"
                 title="ارتباط با من"
               ></v-list-item>
@@ -158,10 +158,32 @@
       </v-btn>
 
       <v-snackbar
+        v-if="!closeNotification"
+        :timeout="-1"
+        color="yellow-lighten-4"
+        location="top"
+        vertical
+        class="rtl"
+        v-model="appNotification"
+      >
+        <div class="rtl" v-html="settingsInfo.appNotification"></div>
+        <template v-slot:actions>
+          <v-btn
+            class="ma-2"
+            block
+            variant="tonal"
+            color="green"
+            @click="closeNotification = true"
+            >متوجه شدم</v-btn
+          >
+        </template>
+      </v-snackbar>
+
+      <v-snackbar
         v-if="!closeUpdate"
         :timeout="-1"
         color="white"
-        centered
+        location="center"
         vertical
         class="rtl"
         v-model="needUpdate"
@@ -189,7 +211,7 @@
       <v-snackbar
         :timeout="-1"
         color="white"
-        centered
+        location="center"
         vertical
         class="rtl"
         v-model="showDonate"
@@ -209,7 +231,7 @@
       <v-snackbar
         :timeout="-1"
         :value="true"
-        centered
+        location="center"
         vertical
         text
         class="rtl"
@@ -265,6 +287,22 @@ export default {
     }
   },
   computed: {
+    appNotification() {
+      if (
+        this.$store.state.settings !== undefined &&
+        this.$store.state.settings !== null
+      ) {
+        if (
+          this.$store.state.settings[0].appNotification !== "" &&
+          this.$store.state.settings[0].appNotification !== undefined &&
+          this.$store.state.settings[0].appNotification !== null
+        ) {
+          return this.$store.state.settings[0].appNotification;
+        } else {
+          return false;
+        }
+      }
+    },
     needUpdate() {
       if (
         this.$store.state.settings !== undefined &&
@@ -340,12 +378,13 @@ export default {
   },
   data: () => ({
     closeUpdate: false,
+    closeNotification: false,
     showSearchButton: true,
     showDonate: false,
     drawer: false,
     snackbar: false,
     thanks: false,
-    installedAppVersion: 2.1,
+    installedAppVersion: 2.2,
   }),
   watch: {
     group() {

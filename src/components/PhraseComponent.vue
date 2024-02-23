@@ -1,12 +1,22 @@
 
 <template>
   <v-col v-for="(item, index) in PhrasesList" :key="index" cols="12">
-    <v-card
-      v-if="item"
-      class="mb-4"
-      :title="item.turkish"
-      prepend-avatar="/icons/tr-sq.svg"
-    >
+    <v-card v-if="item" class="mb-4">
+      <template v-slot:prepend>
+        <v-avatar size="18">
+          <v-img src="/icons/tr-sq.svg" alt="TR"></v-img>
+        </v-avatar>
+      </template>
+      <template v-slot:title>
+        <v-card-text
+          style="font-size: 16px overflow: visible;
+    text-overflow: unset;
+    white-space: normal;"
+          class="pa-0"
+        >
+          {{ item.turkish }}</v-card-text
+        >
+      </template>
       <template v-slot:append>
         <v-btn
           v-if="item.sound_tr"
@@ -37,16 +47,27 @@
       </div>
 
       <div v-if="!item.isPremium" class="card-bottom">
-        <v-card
-          v-if="item"
-          class="rtl"
-          :title="item.farsi"
-          prepend-avatar="/icons/fa-sq.svg"
-        >
-          <template v-slot:append>
-            <v-icon class="mr-2" v-if="item.desc_fa" size="xsmall" color="red"
-              >mdi-information-outline</v-icon
+        <v-card v-if="item" class="rtl">
+          <template v-slot:title>
+            <v-card-text
+              class="pa-0"
+              style="font-size: 16px overflow: visible;
+    text-overflow: unset;
+    white-space: normal;"
             >
+              {{ item.farsi }}</v-card-text
+            >
+          </template>
+
+          <template v-slot:prepend>
+            <v-avatar size="18">
+              <v-img src="/icons/fa-sq.svg" alt="FA"></v-img>
+            </v-avatar>
+          </template>
+          <template v-slot:append>
+            <!-- <v-icon class="mr-2" v-if="item.desc_fa" size="xsmall" color="red"
+              >mdi-information-outline</v-icon
+            > -->
 
             <div
               v-if="item.color"
@@ -132,10 +153,13 @@
         <v-expand-transition v-if="item.image">
           <div v-show="showImage == index">
             <v-img
+              :width="150"
+              aspect-ratio="4/3"
+              cover
               class="mx-auto mb-4 rounded-lg"
               :src="phraseImage(item.image)"
               :lazy-src="phraseImage(item.image)"
-              max-width="500"
+              max-width="150"
             >
               <template v-slot:placeholder>
                 <v-row class="fill-height ma-0" align="center" justify="center">
