@@ -15,6 +15,7 @@
     "@mdi/font": "5.9.55",
     "@supabase/supabase-js": "^1.35.7",
     "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "axios": "^0.26.1",
     "cordova-android": "^10.1.1",
     "core-js": "^3.8.3",

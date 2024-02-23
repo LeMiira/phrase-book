@@ -7,6 +7,7 @@ import Vue3Lottie from 'vue3-lottie'
 import 'vue3-lottie/dist/style.css'
 import VueCookies from 'vue3-cookies'
 import { inject } from "@vercel/analytics"
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 
 
 
@@ -74,6 +75,8 @@ app.use(router);
   app.use(store);
 app.use(VueCookies);
   app.use(Vue3Lottie);
+  app.use(inject);
+  app.use(SpeedInsights);
 
 
   app.mount('#app');
