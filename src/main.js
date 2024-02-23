@@ -6,6 +6,7 @@ import router from './router'
 import Vue3Lottie from 'vue3-lottie'
 import 'vue3-lottie/dist/style.css'
 import VueCookies from 'vue3-cookies'
+import { inject } from "@vercel/analytics"
 
 
 
