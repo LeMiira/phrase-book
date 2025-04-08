@@ -261,14 +261,6 @@
 import { supabase } from "./supabase";
 import { App as CapacitorApp } from "@capacitor/app";
 
-import {
-  AdMob,
-  BannerAdOptions,
-  BannerAdSize,
-  BannerAdPosition,
-  BannerAdPluginEvents,
-  AdMobBannerSize,
-} from "@capacitor-community/admob";
 
 export default {
   name: "App",
@@ -346,35 +338,8 @@ export default {
         window.history.back();
       }
     });
-    AdMob.initialize({
-      initializeForTesting: true,
-    });
-    const showTabBarBanner = () => {
-      const options = {
-        adId: "ca-app-pub-8415309020579786/9837358772",
-        adSize: BannerAdSize.ADAPTIVE_BANNER,
-        position: BannerAdPosition.BOTTOM_CENTER,
-        margin: 0,
-        /*  isTesting: true,
-        npa: true, */
-      };
+    // AdMob initialization removed
 
-      // Show Banner Ad
-      AdMob.showBanner(options).then(
-        (value) => {
-          console.log(value);
-        },
-        (error) => {
-          console.error(error); // show error
-        }
-      );
-      // Subscibe Banner Event Listener
-      AdMob.addListener("onAdLoaded", (info) => {
-        console.log("Showing TabBar Banner AD.");
-      });
-    };
-
-    showTabBarBanner();
   },
   data: () => ({
     closeUpdate: false,
@@ -384,7 +349,7 @@ export default {
     drawer: false,
     snackbar: false,
     thanks: false,
-    installedAppVersion: 2.3,
+    installedAppVersion: 2.3, //This needs to be updated to 2.5 as per user request.
   }),
   watch: {
     group() {
