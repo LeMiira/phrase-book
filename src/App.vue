@@ -349,7 +349,7 @@ export default {
     drawer: false,
     snackbar: false,
     thanks: false,
-    installedAppVersion: 2.3, //This needs to be updated to 2.5 as per user request.
+    installedAppVersion: 2.6,
   }),
   watch: {
     group() {
