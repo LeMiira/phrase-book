@@ -3,8 +3,8 @@ apply plugin: 'com.android.application'
 
 android {
     namespace 'com.temsool.phrasebook'
-    buildToolsVersion '33.0.0 rc1'
-    compileSdk 33
+    buildToolsVersion '34.0.0'
+    compileSdk 34
     defaultConfig {
         applicationId "com.temsool.phrasebook"
         minSdkVersion rootProject.ext.minSdkVersion
