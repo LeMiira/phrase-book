@@ -35,12 +35,3 @@ args = "npm run build"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "node index.js"
-
-[[workflows.workflow]]
-name = "Dev Server"
-author = 41271515
-mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "npm run serve -- --host 0.0.0.0"
