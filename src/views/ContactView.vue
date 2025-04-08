@@ -30,16 +30,7 @@
             >
             </v-list-item>
 
-            <v-list-item
-              href="https://www.linkedin.com/in/miiira/"
-              title="لینکداین"
-              color="red-lighten-5"
-              variant="tonal"
-              class="ma-1"
-              rounded="xl"
-              prepend-icon="mdi-linkedin"
-            >
-            </v-list-item>
+           
           </v-list>
         </v-col>
       </v-row>

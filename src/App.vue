@@ -108,8 +108,8 @@
               <v-list-item
                 class="sidebar-list-item-donate"
                 prepend-icon="mdi-trophy-award"
-                title="حمایت مالی"
-                href="https://hamibash.com/mira"
+                title="قهوه بخرید"
+                href="https://buymeacoffee.com/miiradiaryn"
               ></v-list-item>
 
               <br />
