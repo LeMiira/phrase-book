@@ -1,3 +1,19 @@
 [[ports]]
 localPort = 8080
 externalPort = 80
+
+[workflows]
+runButton = "Build and Serve"
+
+[[workflows.workflow]]
+name = "Build and Serve"
+author = 41271515
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run build"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node index.js"
