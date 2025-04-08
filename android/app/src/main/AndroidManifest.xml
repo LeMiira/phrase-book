@@ -39,7 +39,10 @@
     </application>
 
     <!-- Permissions -->
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" 
+        android:description="Required for advertising purposes"/>
+    <uses-permission android:name="android.permission.INTERNET" 
+        android:description="Required for basic app functionality"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"
+        android:description="Required for network connectivity checks"/>
 </manifest>
