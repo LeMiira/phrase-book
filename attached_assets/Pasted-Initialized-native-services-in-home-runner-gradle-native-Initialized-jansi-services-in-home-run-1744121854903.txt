@@ -1,0 +1,53 @@
+Initialized native services in: /home/runner/.gradle/native
+Initialized jansi services in: /home/runner/.gradle/native
+Found daemon DaemonInfo{pid=3182, address=[f59d0a57-f58c-41f8-9754-8d5bd715eb80 port:44815, addresses:[/127.0.0.1]], state=Idle, lastBusy=1744121704359, context=DefaultDaemonContext[uid=5bbcabd4-b042-49e4-a8ee-d1854a9cb3e9,javaHome=/nix/store/73sflsh3faizaxbqrgdbpjz9y893qk26-openjdk-11.0.12+7/lib/openjdk,daemonRegistryDir=/home/runner/.gradle/daemon,pid=3182,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.base/java.nio.charset=ALL-UNNAMED,--add-opens,java.base/java.net=ALL-UNNAMED,--add-opens,java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx1536m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=/nix/store/6rikzwr29lka7p7mndvany0pqgdjmv31-openjdk-16+36/lib/openjdk,daemonRegistryDir=/home/runner/.gradle/daemon,pid=3668,idleTimeout=null,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.base/java.nio.charset=ALL-UNNAMED,--add-opens,java.base/java.net=ALL-UNNAMED,--add-opens,java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx1536m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+Actual: DefaultDaemonContext[uid=5bbcabd4-b042-49e4-a8ee-d1854a9cb3e9,javaHome=/nix/store/73sflsh3faizaxbqrgdbpjz9y893qk26-openjdk-11.0.12+7/lib/openjdk,daemonRegistryDir=/home/runner/.gradle/daemon,pid=3182,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.base/java.nio.charset=ALL-UNNAMED,--add-opens,java.base/java.net=ALL-UNNAMED,--add-opens,java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx1536m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+Removing daemon from the registry due to communication failure. Daemon information: DaemonInfo{pid=3497, address=[dc98cf76-df4c-4d99-8977-c994ae4de239 port:45037, addresses:[/127.0.0.1]], state=Idle, lastBusy=1744121776998, context=DefaultDaemonContext[uid=652356a1-88ac-473b-824b-89f006ab69b2,javaHome=/nix/store/6rikzwr29lka7p7mndvany0pqgdjmv31-openjdk-16+36/lib/openjdk,daemonRegistryDir=/home/runner/.gradle/daemon,pid=3497,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.base/java.nio.charset=ALL-UNNAMED,--add-opens,java.base/java.net=ALL-UNNAMED,--add-opens,java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx1536m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]}
+Removing 0 daemon stop events from registry
+Previous Daemon (2883) stopped at Tue Apr 08 14:15:01 GMT 2025 by user or operating system
+Previous Daemon (3497) stopped at Tue Apr 08 14:17:08 GMT 2025 by user or operating system
+Starting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for details
+Starting process 'Gradle build daemon'. Working directory: /home/runner/.gradle/daemon/7.5 Command: /nix/store/6rikzwr29lka7p7mndvany0pqgdjmv31-openjdk-16+36/lib/openjdk/bin/java --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.prefs/java.util.prefs=ALL-UNNAMED --add-opens java.prefs/java.util.prefs=ALL-UNNAMED --add-opens java.base/java.nio.charset=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED -Xmx1536m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp /home/runner/.gradle/wrapper/dists/gradle-7.5-bin/f1w0cc9nuo0eivz97x2xlu9sv/gradle-7.5/lib/gradle-launcher-7.5.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 7.5
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 2.403 secs.
+The client will now receive all logging from the daemon (pid: 3719). The daemon log file: /home/runner/.gradle/daemon/7.5/daemon-3719.out.log
+Starting build in new daemon [memory: 1.5 GiB]
+Using 6 worker leases.
+Watching the file system is configured to be enabled if available
+Not watching /home/runner/workspace/android since the file system is not supported
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/home/runner/workspace/android/settings.gradle'.
+Projects loaded. Root project using build file '/home/runner/workspace/android/build.gradle'.
+Included projects: [root project 'android', project ':app', project ':capacitor-android', project ':capacitor-app', project ':capacitor-community-admob', project ':capacitor-cordova-android-plugins']
+
+> Configure project :
+Evaluating root project 'android' using build file '/home/runner/workspace/android/build.gradle'.
+
+> Configure project :app
+Evaluating project ':app' using build file '/home/runner/workspace/android/app/build.gradle'.
+Using default execution profile
+WARNING:Using flatDir should be avoided because it doesn't support any meta-data formats.
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Script '/home/runner/workspace/android/app/capacitor.build.gradle' line: 10
+
+* What went wrong:
+A problem occurred evaluating script.
+> Could not read script '/home/runner/workspace/android/capacitor-cordova-android-plugins/cordova.variables.gradle' as it does not exist.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 16s
+Some of the file system contents retained in the virtual file system are on file systems that Gradle doesn't support watching. The relevant state was discarded to ensure changes to these locations are properly detected. You can override this by explicitly enabling file system watching.
