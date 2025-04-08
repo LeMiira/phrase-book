@@ -1,3 +1,4 @@
+
 {
   "appId": "com.temsool.phrasebook",
   "appName": "Turkish Persian Phrasebook",
@@ -6,7 +7,15 @@
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 3000,
-      "launchAutoHide": false
+      "launchAutoHide": false,
+      "backgroundColor": "#ffffffff",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": true,
+      "androidSpinnerStyle": "large",
+      "spinnerColor": "#999999"
     }
+  },
+  "server": {
+    "androidScheme": "https"
   }
 }
